@@ -1,275 +1,93 @@
-/* Custom styles for the affiliate page */
-.navbar-brand {
-  font-weight: bold;
-}
-
-.search-area {
-  padding: 20px 0;
-}
-
-.top-results h2,
-.related-brands h3 {
-  color: #333;
-  padding-bottom: 10px;
-}
-
-.list-group-item-action {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.badge-pill {
-  margin-left: auto;
-}
-
-/* Responsive design adjustments */
-@media (max-width: 576px) {
-  .navbar-brand {
-    font-size: 18px;
-  }
-
-  .search-area {
-    padding: 10px 0;
-  }
-}
-
-/* Custom styles for the product list */
-.img-fluid {
-  /* max-width: 120px; */
-  height: auto;
-  margin-right: 15px;
-}
-
-.list-group-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-/* You may need additional responsive design tweaks based on your actual layout and content */
-@media (max-width: 768px) {
-  .list-group-item {
-    flex-direction: column;
-    align-items: start;
-  }
-
-  .img-fluid {
-    margin-bottom: 10px;
-  }
-}
-
+/* Ensure the card body takes the full height and the button is aligned at the bottom */
 .card {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Custom styles for the product pagination component */
-.card-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.row {
-  width: 80vw;
-}
-
-.card-title,
-.card-text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.product-price .discount {
-  color: #ff0000;
-  margin-right: 8px;
-}
-
-.product-price .mrp {
-  text-decoration: line-through;
-  margin-left: 8px;
-  color: #777;
-}
-
-.product-rating {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffc107;
-}
-
-.product-delivery,
-.product-warranty,
-.product-return-policy {
-  font-size: 0.9em;
-  color: #555;
-  margin-top: 4px;
-}
-
-.promotion-contact a {
-  color: #007bff; /* Bootstrap primary color */
-  text-decoration: none;
-}
-
-.promotion-contact a:hover {
-  text-decoration: underline;
-}
-
-/* Customize the pagination buttons */
-.pagination a {
-  color: #007bff;
-}
-
-/* Add custom styles for your social media buttons here */
-.social-media-buttons {
-  /* Example style for the buttons container */
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-  /* Add responsive adjustments as needed */
-}
-
-/* Add the gradient background to the top area including navbar and search */
-.top-gradient {
-  background: #00b4d8;
-  padding-bottom: 1%;
-  margin-bottom: 3%;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Style for the navbar-brand and search bar */
-.navbar {
-  margin-bottom: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.search-input {
-  margin: 0 1rem; /* Adjust as needed */
-}
-
-.search-button {
-  margin-right: 1rem; /* Adjust as needed */
-}
-
-/* Styles for the pagination */
-.pagination a {
-  color: #007bff;
-}
-
-/* Styles for the social media icons and their background */
-.social-media-background {
-  background: linear-gradient(to right, #ff512f, #dd2476);
-  padding: 1rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.social-media-icons {
-  color: #fff; /* White color icons */
-}
-
-.social-media-background > .d-flex > div {
-  /* Add more space around the icons */
-  padding: 0 2rem; /* Adjust the spacing to your liking */
-}
-
-/* For even larger spacing on larger screens, you can use a media query */
-@media (min-width: 992px) {
-  /* Adjusting for large screens */
-  .social-media-background > .d-flex > div {
-    padding: 0 4rem; /* Larger spacing for larger screens */
+    display: flex;
+    flex-direction: column;
   }
-}
-
-.affiliate-disclosure {
-  display: block; /* or 'flex' if you want to use flexbox for positioning */
-  margin: 10px 0; /* Adds space above and below the disclosure */
-  font-size: 0.8rem; /* Reduces the size of the text */
-  color: white; /* Changes the text color to white */
-}
-
-.affiliate-disclosure p {
-  position: absolute;
-  font-size: medium;
-  color: red;
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
-  animation: marquee 30s linear infinite;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(100%);
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
-  to {
-    transform: translateX(-100%);
+  
+  .card-body .btn {
+    margin-top: auto;
   }
-}
+  
 
-.card-img-top {
-  width: 100%; /* Ensure the image covers the card width */
-  object-fit: contain !important; /* Cover the aspect ratio of the card image area */
-  height: 150px; /* Adjust height as necessary */
-}
+  .product-price {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .product-price .discount {
+    color: red;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .product-price .current-price {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .product-price .mrp {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 0.9rem;
+  }
+  
+  .product-rating {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  
+  .product-rating .stars {
+    color: gold;
+    margin-right: 5px;
+  }
+  
+  .product-rating .rating-number {
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  .product-rating .rating-count {
+    color: gray;
+    margin-left: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .bought-last-month {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 0 10px 5px;
+    border-radius: 5px;
+    /* margin-top: 10px; */
+    font-size: 0.9rem;
+    color: #495057; /* Dark gray text color */
+    display: inline-block; /* Make it a block element with padding */
+  }
 
-/* Additional styles for better layout and visibility */
-.discount {
-  color: #ff0000;
-  font-weight: bold;
-}
-
-.current-price {
-  color: #000;
-  font-weight: bold;
-}
-
-.mrp {
-  font-size: 0.8rem;
-  text-decoration: line-through;
-  color: #777;
-}
-
-.product-rating .rating-number {
-  margin-left: 4px;
-  font-weight: bold;
-}
-
-.product-rating .rating-count {
-  font-size: 0.8rem;
-  color: #777;
-}
-
-.product-delivery,
-.product-return-policy {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* Ensure the card text is aligned */
-.card-title {
-  white-space: normal;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 1rem; /* Adjust the font size as necessary */
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.card-body .btn {
-  width: 100%; /* Makes buttons stretch to the full width of the card body */
-  margin-top: 10px; /* Adds space above the buttons */
-}
+  @keyframes scroll-text {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  
+  .marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-text 20s linear infinite;
+  }
